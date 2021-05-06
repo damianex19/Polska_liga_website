@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Polish lower leagues clubs listed by voivodeship</h1>
+		{% for  club in clubs %}
+		<article class="media content-section">
+		  <div class="media-body">
+			<div class="article-metadata">
+			  <a class="mr-2" href="#">{{ club.level }} league</a>
+			  <small class="text-muted">{{ club.updatedata }}</small>
+			</div>
+			<h2><a class="article-title" href="#">{{ club.club }}</a></h2>
+			<p class="article-content">{{ club.voivedship }}</p>
+		  </div>
+		</article>
+		{%endfor%}
+{% endblock content %}
